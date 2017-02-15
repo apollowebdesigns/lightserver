@@ -1,8 +1,19 @@
 from flask import Flask
+import RPi.GPIO as GPIO
+import time
+
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setwarnings(False)
+    GPIO.setup(18,GPIO.OUT)
+    print "LED on"
+    GPIO.output(18,GPIO.HIGH)
+    time.sleep(1)
+    print "LED off"
+    GPIO.output(18,GPIO.LOW)
     return "Hello World!"
 
 if __name__ == "__main__":
