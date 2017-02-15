@@ -2,6 +2,9 @@ from flask import Flask
 import RPi.GPIO as GPIO
 import time
 
+###callout ip addresses
+### pi zero 192.168.1.67
+
 app = Flask(__name__)
 
 @app.route("/")
