@@ -4,6 +4,7 @@ import time
 
 ###callout ip addresses
 ### pi zero 192.168.1.67
+### port number 9990
 
 app = Flask(__name__)
 
